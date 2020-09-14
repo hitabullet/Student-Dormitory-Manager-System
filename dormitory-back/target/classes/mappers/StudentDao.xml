@@ -1,0 +1,132 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.ncc.zsh.dao.StudentDao">
+
+    <!--分页 升序-->
+    <select id="findList" resultType="cn.edu.ncc.zsh.pojo.Student">
+        select id,
+        studentNo,
+        name,
+        sex,
+        chamber,
+        address,
+        number,
+        className,
+        flag
+        from student
+        <where>
+            and flag=0
+            <if test="name!=null and name!=''">
+                and name LIKE '%${name}%'
+            </if>
+            <if test="sex!=null and sex!=''">
+                and sex=#{sex}
+            </if>
+            ORDER BY studentNo ASC
+        </where>
+    </select>
+
+    <!--更新数据-->
+    <update id="update">
+        update student set
+                           studentNo=#{studentNo},
+                           name=#{name},
+                           sex=#{sex},
+                           number=#{number},
+                           chamber=#{chamber},
+                           address=#{address},
+                           className=#{className},
+                           flag=0
+        where id=#{id}
+    </update>
+
+    <!--删除一条数据-->
+    <update id="delete">
+        update student set flag=1 where id=#{id}
+    </update>
+
+    <!--降序排列-->
+    <select id="findListDesc" resultType="cn.edu.ncc.zsh.pojo.Student">
+        select id,
+               studentNo,
+               name,
+               sex,
+               chamber,
+               address,
+               className,
+               flag
+        from student
+        where
+            flag=0 ORDER BY studentNo DESC
+
+    </select>
+
+    <!--添加数据-->
+    <insert id="insert">
+        insert into student(
+            studentNo,
+            name,
+            sex,
+            address,
+            number,
+            className,
+            chamber,
+            flag
+        ) values(
+                    #{studentNo},
+                    #{name},
+                    #{sex},
+                    #{address},
+                    #{number},
+                    #{className},
+                    #{chamber},
+                    0
+                )
+    </insert>
+
+    <!--查看学号是否重复-->
+    <select id="findNo" resultType="cn.edu.ncc.zsh.pojo.Student">
+        select
+        studentNo,
+        chamber,
+        flag
+        from student
+        <where>
+        and flag = 0
+            <if test="studentNo!=null and studentNo!=''">
+                and studentNo=#{studentNo}
+            </if>
+            <if test="chamber!=null and chamber!=''">
+                and chamber=#{chamber}
+            </if>
+        </where>
+    </select>
+
+    <!--查询寝室是否有六人-->
+    <select id="findChamber" resultType="int">
+        SELECT SUM(chamber=#{chamber} and flag=0) as num from student
+    </select>
+
+    <!--查询-->
+    <select id="selectbychamber" resultType="cn.edu.ncc.zsh.pojo.Student">
+        select id,
+        studentNo,
+        name,
+        sex,
+        chamber,
+        address,
+        number,
+        className,
+        flag
+        from student
+        <where>
+            <if test="chamber!=null and chamber!=''">
+                and chamber=#{chamber}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

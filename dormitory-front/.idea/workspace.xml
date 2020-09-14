@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2de7b7e0-9b5d-42a5-accd-7965f36ddeb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/demo_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icon/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/chamber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/new-banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/qq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/scenery-four.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/scenery-one.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/scenery-three.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/scenery-tow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/DormitoryRepair.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Forget.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/GetAccommodation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/InformationEntry.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Sidentfy.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/Navigation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/float.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/logon.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/axios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/home/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hAJz6jvy76GL0GN3mG67bSDpMX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dormitory-back-end" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codeapp\dormitory-front\src\assets\img" />
+      <recent name="D:\codeapp\dormitory-front\src\components\common" />
+      <recent name="D:\codeapp\dormitory-front\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codeapp\dormitory-front\src\assets\img" />
+      <recent name="D:\codeapp\dormitory-front\src\assets\icon" />
+      <recent name="D:\codeapp\dormitory-front\src\components\common" />
+      <recent name="D:\codeapp\dormitory-front\src\components\public" />
+      <recent name="D:\codeapp\dormitory-front\src\components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2de7b7e0-9b5d-42a5-accd-7965f36ddeb9" name="Default Changelist" comment="" />
+      <created>1599448222735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599448222735</updated>
+      <workItem from="1599448224419" duration="1165000" />
+      <workItem from="1599449420177" duration="20222000" />
+      <workItem from="1599532314158" duration="29120000" />
+      <workItem from="1599610140067" duration="18139000" />
+      <workItem from="1599635277143" duration="102000" />
+      <workItem from="1599635389983" duration="37000" />
+      <workItem from="1599635438617" duration="71000" />
+      <workItem from="1599635529555" duration="5359000" />
+      <workItem from="1599657771978" duration="3747000" />
+      <workItem from="1599696791379" duration="17980000" />
+      <workItem from="1599742642945" duration="3411000" />
+      <workItem from="1599783095139" duration="14742000" />
+      <workItem from="1600042374864" duration="4577000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="492" y="235" key="#Notifications" timestamp="1599697083609">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="492" y="235" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1599697083609" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599638208206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599638208206" />
+    <state x="0" y="0" key="FileChooserDialogImpl" timestamp="1600042475304">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600042475304" />
+    <state width="1515" height="131" key="GridCell.Tab.0.bottom" timestamp="1599815432736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599815432736" />
+    <state width="1515" height="131" key="GridCell.Tab.0.center" timestamp="1599815432736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="131" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599815432736" />
+    <state width="1515" height="131" key="GridCell.Tab.0.left" timestamp="1599815432736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="131" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599815432736" />
+    <state width="1515" height="131" key="GridCell.Tab.0.right" timestamp="1599815432736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="131" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599815432736" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599619192542">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599619192542" />
+  </component>
+</project>

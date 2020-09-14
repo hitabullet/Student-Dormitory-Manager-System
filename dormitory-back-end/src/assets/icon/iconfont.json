@@ -1,0 +1,23 @@
+{
+  "id": "1874843",
+  "name": "Vue项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7450652",
+      "name": "验证码",
+      "font_class": "yanzhengma",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "5732982",
+      "name": "打扫、卫生",
+      "font_class": "dasao",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}

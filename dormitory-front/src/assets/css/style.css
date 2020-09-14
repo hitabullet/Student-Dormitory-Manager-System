@@ -1,0 +1,134 @@
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px !important;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 左右padding */
+    padding: 0 5vw;
+    height: 60px;
+}
+
+.logo {
+    flex-grow: 1;
+    max-width: 180px;
+}
+
+.logon {
+    flex-grow: 1;
+}
+
+.nav-menu {
+    flex-grow: 2;
+    /* 占令一半宽度 */
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    /* 最宽550px */
+    max-width: 600px;
+}
+
+.nav-menu li {
+    color: #dadbdd;
+    font-weight: 500;
+}
+
+.burger div {
+    /* 设置汉堡按钮三层条 */
+    width: 25px;
+    height: 3px;
+    background-color: #dadbdd;
+    margin: 4px;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 30%;
+}
+
+/* 屏幕适配 */
+@media screen and (max-width: 1000px) {
+    .burger {
+        display: block;
+        z-index: 9999;
+    }
+
+    /* 小屏幕菜单显示位置为右侧抽屉形式 */
+    .nav-menu {
+        position: absolute !important;
+        top: 60px;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 9999;
+        /* 动画 */
+        transform: translateX(100%);
+        height: 91vh;
+        width: 35%;
+    }
+
+    /* 菜单打开时，滑到初始位置 */
+    .nav-menu.open {
+        transform: translateX(0);
+        transition: 0.4s ease-in-out;
+    }
+
+    /* 每个菜单项默认看不到，向右移动20象素 */
+    .nav-menu li {
+        /* 上下间距 */
+        margin: 3vh;
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    /* 汉堡按钮被点开时，设置按钮过渡 */
+    .burger.active div {
+        transition: 0.3s ease-in-out 0.3s;
+    }
+
+    /* 第一条线旋转45度 */
+    .burger.active .top-line {
+        transform: rotate(45deg) translate(4px, 6px);
+    }
+
+    /* 第三条线旋转-45度 */
+    .burger.active .bottom-line {
+        transform: rotate(-45deg) translate(4px, -6px);
+    }
+
+    /* 中间线向右移动并变为透明 */
+    .burger.active .middle-line {
+        opacity: 0;
+        transform: translateX(10px);
+        transition: 0.3s ease-in-out;
+    }
+
+    /* 菜单项滑入动画 */
+    @keyframes slideIn {
+        from {
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

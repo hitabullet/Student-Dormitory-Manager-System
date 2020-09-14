@@ -1,0 +1,30 @@
+{
+  "name": "dormitory-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
+    "node-sass": "^4.14.1",
+    "scss": "^0.2.4",
+    "scss-loader": "0.0.1",
+    "vue": "^2.6.11",
+    "vue-cookies": "^1.7.4",
+    "vue-router": "^3.4.3",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "axios": "^0.18.0",
+    "sass-loader": "^10.0.2",
+    "vue-cli-plugin-axios": "0.0.4",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
