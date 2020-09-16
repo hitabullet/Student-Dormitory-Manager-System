@@ -36,7 +36,7 @@
         </el-date-picker>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submit('form')">提交</el-button>
+        <el-button type="primary" @click="submit('form')" :disabled="!btn">提交</el-button>
       </el-form-item>
     </el-form>
     <div class="prompt">
@@ -54,6 +54,7 @@ export default {
   inject: ['reload'],   //注入App里的reload方法
   data() {
     return {
+      btn: true,
       repairs: {
         chamber: '',
         message: '',
@@ -116,6 +117,16 @@ export default {
       return this.$cookies.get('studentNo')
     }
   },
+  mounted() {
+    this.$axios.get("/api/DormRepairs/valid/" + this.showStudentNo).then(resp => {
+      if (resp.data === false) {
+        /*document.querySelector('.prompt').style.display = 'block';*/
+        document.querySelector('.marquee').innerHTML = '您暂未入住宿舍...';
+        document.querySelector('.marqueeT').innerHTML = '您暂未入住宿舍...';
+        this.btn = !this.btn;
+      }
+    });
+  }
 }
 </script>
 
