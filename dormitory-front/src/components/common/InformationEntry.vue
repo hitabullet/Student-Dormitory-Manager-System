@@ -49,7 +49,7 @@
 <script>
 export default {
   name: "InformationEntry",
-  inject:['reload'],   //注入App里的reload方法
+  inject: ['reload'],   //注入App里的reload方法
   data() {
     let validName = (rule, value, callback) => {
       if (value === '') {
@@ -63,7 +63,7 @@ export default {
       }
     };
     return {
-      btnChangeEnable:true,
+      btnChangeEnable: true,
       student: {
         name: '',
         sex: '1',
@@ -102,8 +102,8 @@ export default {
         if (!valid) {
           return false;
         } else {
-          this.$axios.post('/api/student/update',{
-            studentNo :this.showStudentNo,
+          this.$axios.post('/api/student/update', {
+            studentNo: this.showStudentNo,
             name: this.student.name,
             sex: this.student.sex,
             address: this.student.address,

@@ -33,36 +33,14 @@
                     </span>
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item>
-                            <el-button type="text" @click="centerDialogVisible = true"
-                                       style="font-size: 13px;color: #606266">
-                                修改资料
-                            </el-button>
-                        </el-dropdown-item>
+                          <a href="https://github.com/hitabullet/Student-Dormitory-Manager-System">项目地址</a>
+                          </el-dropdown-item>
                         <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
             </div>
         </div>
-        <el-dialog
-                title="提示"
-                :visible.sync="centerDialogVisible"
-                width="30%"
-                center>
-            <el-form status-icon
-                     :model="userForm"
-                     ref="forgetForm"
-                     label-width="100px"
-                     size="mini"
-                     :rules="rules">
-            <el-form-item label="您的用户名" label-width="140px">
-                <el-input v-model="userForm.name"></el-input>
-            </el-form-item>
-            </el-form>
-            <span slot="footer" class="dialog-footer">
-                     <el-button @click="centerDialogVisible = false">取 消</el-button>
-                    <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
-            </span>
-        </el-dialog>
+
     </div>
 </template>
 <script>
@@ -83,7 +61,6 @@
                 fullscreen: false,
                 flag: false,
                 message: 2,
-                centerDialogVisible: false,
                 userForm:{
                     username:''
                 },

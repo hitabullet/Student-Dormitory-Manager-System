@@ -182,10 +182,12 @@ h3 {
 
 .login-form {
   border-radius: 6px;
-  background: #ffffff;
   width: 370px;
   padding: 25px 25px 5px 25px;
   position: relative;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.3);
+  box-shadow: 0 3px 0 rgba(12,12,12,.03);
  /* height: 320px;
   overflow: hidden;*/
 }
@@ -196,6 +198,8 @@ h3 {
 
 .el-input {
   height: 38px;
+  background-color: #1c84c6;
+  border-color: #1c84c6;
 }
 
 input {

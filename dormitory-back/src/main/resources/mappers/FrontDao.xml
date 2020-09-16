@@ -49,8 +49,8 @@
 
     <!--查看学号是否信息录入过-->
     <select id="findById" resultType="int">
-        select  CASE  when name="0"  then 1 ELSE 0 END and studentNo=#{studentNo}
-        from student order by id DESC limit 1
+        select  CASE  when name="0"  then 1 ELSE 0 END
+        from student where studentNo=#{studentNo}
     </select>
 
     <!--更新数据-->

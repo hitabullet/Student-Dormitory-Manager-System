@@ -29,8 +29,8 @@
         </el-table-column>
         <el-table-column label="容纳人数" prop="peoples" align="center">
         </el-table-column>
-        <el-table-column label="操作" align="center">
-          <template slot-scope="scope">
+        <el-table-column label="操作" align="center" >
+          <template slot-scope="scope" v-if="btnChangeEnable">
             <el-button size="mini"
                        v-if="scope.row.people < 6"
                        @click="choose(scope.row)"
@@ -67,6 +67,7 @@ export default {
   inject: ['reload'],   //注入App里的reload方法
   data() {
     return {
+      btnChangeEnable: false,
       pageInfo: {
         pageNum: 1,
         total: 10,
@@ -173,6 +174,7 @@ export default {
         /*document.querySelector('.prompt').style.display = 'block';*/
         document.querySelector('.marquee').innerHTML = '您还未完成宿舍入住,请你尽快完成宿舍入住';
         document.querySelector('.marqueeT').innerHTML = '您还未完成宿舍入住,请你尽快完成宿舍入住';
+        this.btnChangeEnable = !this.btnChangeEnable;
       }
     });
   }
