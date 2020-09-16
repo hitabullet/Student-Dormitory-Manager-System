@@ -35,7 +35,7 @@
 
     <!--查看该学生是否宿舍入住-->
     <select id="findById" resultType="int">
-        select  CASE  when chamber is null  then 1 ELSE 0 END and studentNo=#{studentNo}
+        select  CASE  when flag=1  then 1 ELSE 0 END and studentNo=#{studentNo}
         from student order by id DESC limit 1
     </select>
 

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="biye" />
+        <module name="dormitory-back" />
         <module name="zsh" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="biye" options="-parameters" />
+      <module name="dormitory-back" options="-parameters" />
       <module name="zsh" options="-parameters" />
     </option>
   </component>
