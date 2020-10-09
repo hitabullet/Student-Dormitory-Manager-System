@@ -16,7 +16,7 @@ public class StudentService extends ModelService<Student, StudentDao> {
     public Boolean validStudentNo(Integer studentNo) {
         Student conditon = new Student();
         conditon.setStudentNo(studentNo);
-        return dao.findNo(conditon) !=null;
+        return dao.find(conditon) !=null;
     }
 
 }

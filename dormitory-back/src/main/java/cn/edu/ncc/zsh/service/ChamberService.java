@@ -11,6 +11,6 @@ public class ChamberService extends ModelService<Chamber, ChamberDao> {
     public Boolean validChamberNo(Integer chamberNo) {
         Chamber conditon = new Chamber();
         conditon.setChamberNo(chamberNo);
-        return dao.findNo(conditon) !=null;
+        return dao.find(conditon) !=null;
     }
 }

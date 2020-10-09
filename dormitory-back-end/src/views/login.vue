@@ -120,6 +120,7 @@ export default {
             username: this.loginForm.username,
             password: this.loginForm.password
           }).then(response => {
+
             //判断后台返回的数据是否成功，如果代表成功，弹出登录成功的消息，跳转到首页
             if (response.data == 'success') {
               this.$message({
@@ -153,10 +154,6 @@ export default {
       this.identifyCode = '';
       this.makeCode(this.identifyCodes, 4);
     },
-   /* /!*注册*!/
-    logon() {
-      this.logonVisible = true;
-    }*/
   },
   created() {
     this.refreshCode();
@@ -198,7 +195,6 @@ h3 {
 
 .el-input {
   height: 38px;
-  background-color: #1c84c6;
   border-color: #1c84c6;
 }
 

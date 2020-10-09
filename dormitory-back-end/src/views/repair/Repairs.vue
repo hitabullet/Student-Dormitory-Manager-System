@@ -254,7 +254,7 @@ export default {
       this.addVisible = true;
       this.clearForm();
     },
-    /*添加内容*/
+    /*添加需维修宿舍*/
     insertForm(formName) {
       this.$refs[formName].validate(valid => {
         if (!valid) {
@@ -293,7 +293,7 @@ export default {
       this.repairs.message = row.message;
       this.repairs.repairtime = row.repairtime;
     },
-    /*提交修改的数据给后台*/
+    /*修改维修宿舍信息*/
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (!valid) {
@@ -323,7 +323,7 @@ export default {
         }
       });
     },
-    /*删除*/
+    /*维修宿舍已修好*/
     deleteId(row) {
       this.$confirm('确定该宿舍损坏处已被修好？该操作无法回退！', '提示', {
         distinguishCancelAndClose: true,

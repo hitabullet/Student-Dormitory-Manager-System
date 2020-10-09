@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     passwordFormatter(row, col, value) {
-      return value.length >= 6 ? '******' : '';
+      return value.length >= 6 ? '保密' : '';
     },
     /*分页*/
     page() {

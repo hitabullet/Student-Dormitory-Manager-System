@@ -3,6 +3,9 @@ package cn.edu.ncc.zsh.pojo;
 import cn.edu.ncc.zsh.sys.Model;
 import lombok.Data;
 
+/**
+ * @author 学生类
+ */
 @Data
 public class Student extends Model {
 

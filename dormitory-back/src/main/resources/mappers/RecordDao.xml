@@ -5,26 +5,33 @@
 <mapper namespace="cn.edu.ncc.zsh.dao.RecordDao">
 
     <select id="find" resultType="cn.edu.ncc.zsh.pojo.Record">
-        SELECT sum(peoples) as flag,SUM(people) as id  FROM chamber WHERE flag=0;
-    </select>
-
-    <select id="findQuit" resultType="cn.edu.ncc.zsh.pojo.Record">
-        SELECT sum(CASE when flag=1 then 1 ELSE 0 END)  as id FROM student;
+        SELECT sum(people)  as id,
+               sum(peoples) as flag
+        FROM chamber
+        where flag = 0;
     </select>
 
     <select id="findMaintain" resultType="cn.edu.ncc.zsh.pojo.Record">
-        SELECT sum(CASE when flag=0 then 1 ELSE 0 END)  AS id from repair;
+        SELECT sum(CASE when flag = 0 then 1 ELSE 0 END) AS id
+        from repair;
     </select>
 
     <select id="findLeave" resultType="cn.edu.ncc.zsh.pojo.Record">
-        SELECT sum(CASE when  flag=0 then 1 ELSE 0 END)  AS checkSum,sum(CASE when  flag=2 then 1 ELSE 0 END)  as exitCheckSum,sum(CASE when  flag=1 then 1 ELSE 0 END)  as uncheckSum from student;
+        SELECT sum(CASE when flag = 0 then 1 ELSE 0 END) AS checkSum,
+               sum(CASE when flag = 2 then 1 ELSE 0 END) as exitCheckSum,
+               sum(CASE when flag = 1 then 1 ELSE 0 END) as uncheckSum
+        from student;
     </select>
 
     <select id="findRepair" resultType="cn.edu.ncc.zsh.pojo.Record">
-        SELECT count(repairtime) as num,repairtime,flag  FROM repair where flag=0 GROUP BY repairtime
+        SELECT count(repairtime) as num, repairtime, flag
+        FROM repair
+        where flag = 0
+        GROUP BY repairtime
     </select>
 
     <select id="findSNum" resultType="cn.edu.ncc.zsh.pojo.Record">
-        SELECT sum(CASE when  flag!=2 then 1 ELSE 0 END) as id FROM student;
+        SELECT sum(CASE when flag != 2 then 1 ELSE 0 END) as id
+        FROM student;
     </select>
 </mapper>

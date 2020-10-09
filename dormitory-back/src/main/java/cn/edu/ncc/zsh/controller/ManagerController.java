@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * @author 用户控制层
+ */
 @RestController
 @RequestMapping("/manager")
 public class ManagerController {
@@ -19,24 +22,24 @@ public class ManagerController {
     @Autowired
     private ManagerService managerService;
 
-    /*
+    /**
      * 处理登录请求
-     * */
+     *
+     * @param manager
+     * @return
+     */
     @PostMapping("login")//代表这个方法处理/manager/login的post请求
     public String managerLogin(@RequestBody Manager manager, HttpSession session,
                             HttpServletResponse response) {
         //将用户名和密码作为条件进行数据查询，如果查到有数据，代表登录成功
         Manager principal = managerService.find(manager);
-
-
         if (principal != null){
             //代表登录成功,将principal存入session中
             session.setAttribute("principal",principal);
             return "success";
         }
         response.setStatus(403);
-        return null;
-
+        return "error";
     }
 
 

@@ -287,7 +287,7 @@ export default {
     classNameFormatter(row, col, value) {
       return value.replace(value.substr(-2, 2), '');
     },
-    /*分页*/
+    /*分页并查询*/
     page() {
       this.$axios.get('/api/student/page', {
         params: {
@@ -322,7 +322,7 @@ export default {
       this.origin = row.studentNo;
       this.originC = row.chamber;
     },
-    /*提交修改的数据给后台*/
+    /*修改学生数据*/
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (!valid) {
@@ -357,7 +357,7 @@ export default {
         }
       });
     },
-    /*删除*/
+    /*删除学生数据*/
     deleteId(row) {
       this.$confirm('确定删除该学生信息？该操作无法回退！', '提示', {
         distinguishCancelAndClose: true,
@@ -420,7 +420,7 @@ export default {
       this.addVisible = true;
       this.resetForm();
     },
-    /*添加内容*/
+    /*添加学生*/
     insertForm(formName) {
       this.$refs[formName].validate(valid => {
         if (!valid) {

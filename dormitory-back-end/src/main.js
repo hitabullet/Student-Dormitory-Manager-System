@@ -10,7 +10,9 @@ import './assets/css/icon.css';
 import './assets/icon/iconfont.css';
 import './components/common/directives';
 import moment from 'moment'
+import JSEncrypt from 'jsencrypt';//引入模块,密码加密
 
+Vue.prototype.$jsEncrypt = JSEncrypt;//配置全局变量
 Vue.prototype.$moment = moment
 
 Vue.config.productionTip = false;

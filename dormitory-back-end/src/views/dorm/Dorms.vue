@@ -261,7 +261,7 @@
                     this.page();
                 }
             },
-            /*修改*/
+            /*修改宿舍信息*/
             editChamber(row) {
                 this.editVisible = true;
                 this.home.id = row.id;
@@ -272,9 +272,9 @@
                 this.home.chamber = row.chamber;
                 this.origin = row.chamberNo;
             },
-            /*删除*/
+            /*删除宿舍*/
             deleteId(row) {
-                this.$confirm('确定删除该学生信息？该操作无法回退！', '提示', {
+                this.$confirm('确定删除该宿舍信息？该操作无法回退！', '提示', {
                     distinguishCancelAndClose: true,
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
@@ -296,7 +296,7 @@
                     });
                 });
             },
-            /*提交修改的数据给后台*/
+            /*修改宿舍数据*/
             submitForm(formName) {
                 this.$refs[formName].validate(valid => {
                     if (!valid) {
@@ -338,12 +338,12 @@
                         this.home.chamber = ""
                 })
             },
-            /*添加*/
+            /*添加弹出框*/
             addList() {
                 this.addVisible = true;
                 this.clearForm();
             },
-            /*添加内容*/
+            /*添加宿舍*/
             addForm(formName) {
                 this.$refs[formName].validate(valid => {
                     if (!valid) {

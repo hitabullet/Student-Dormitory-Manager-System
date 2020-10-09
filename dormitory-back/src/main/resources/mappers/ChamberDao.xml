@@ -58,7 +58,7 @@
     </update>
 
     <!--查看寝室号是否重复-->
-    <select id="findNo" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+    <select id="find" resultType="cn.edu.ncc.zsh.pojo.Chamber">
         select
         chamberNo,
         flag

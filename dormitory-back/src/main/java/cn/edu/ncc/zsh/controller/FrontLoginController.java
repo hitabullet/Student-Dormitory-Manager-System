@@ -10,15 +10,21 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * @author 学生登录注册以及忘记密码
+ */
 @RestController
 @RequestMapping("/student")
 public class FrontLoginController {
     @Autowired
     private FrontLoginService frontLoginService;
 
-    /*
-     * 处理登录请求
-     * */
+    /**
+     * 处理登录功能
+     *
+     * @param student,session,response
+     * @return
+     */
     @PostMapping("login")//代表这个方法处理/student/login的post请求
     public String studentLogin(@RequestBody Student student, HttpSession session,
                                HttpServletResponse response) {
@@ -35,9 +41,12 @@ public class FrontLoginController {
 
     }
 
-    /*
-     * 处理注册请求
-     * */
+    /**
+     * 处理注册功能
+     *
+     * @param student
+     * @return
+     */
     @PostMapping("register")
     public String studentRegister(@RequestBody Student student) {
 
@@ -61,18 +70,24 @@ public class FrontLoginController {
            }
     }
 
-    /*
-     * 处理信息录入
-     * */
+    /**
+     * 忘记密码
+     *
+     * @param student
+     * @return
+     */
     @PostMapping("update")
     public boolean studentUpdate(@RequestBody Student student) {
         frontLoginService.updateInfo(student);
         return true;
     }
 
-    /*
-     * 处理信息录入
-     * */
+    /**
+     * 忘记密码
+     *
+     * @param student
+     * @return
+     */
     @PostMapping("forget")
     public boolean studentForget(@RequestBody Student student) {
         return frontLoginService.forget(student);

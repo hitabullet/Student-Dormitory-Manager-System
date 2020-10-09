@@ -6,6 +6,9 @@ import cn.edu.ncc.zsh.service.DormitoryRepairsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author 宿舍损坏控制层
+ */
 @RestController
 @RequestMapping("/DormRepairs")
 public class DormitoryRepairsController {

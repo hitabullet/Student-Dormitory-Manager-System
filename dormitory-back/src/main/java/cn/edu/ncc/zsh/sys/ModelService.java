@@ -15,30 +15,8 @@ public class ModelService <T extends Model,D extends ModelDao<T>>{
         return dao.find(condition);
     }
 
-    public int findById(int id) {return dao.findById(id);};
-
     public T findNo(T condition){
         return dao.findNo(condition);
-    }
-
-    public T findSNum(T condition){
-        return dao.findSNum(condition);
-    }
-
-    public T findLeave(T condition){
-        return dao.findLeave(condition);
-    }
-
-    public T findQuit(T condition){
-        return dao.findQuit(condition);
-    }
-
-    public T findMaintain(T condition){
-        return dao.findMaintain(condition);
-    }
-
-    public List<T> findRepair(T condition){
-        return dao.findRepair(condition);
     }
 
     public List<T> findList(T condition){
@@ -86,6 +64,7 @@ public class ModelService <T extends Model,D extends ModelDao<T>>{
             dao.update(t);
         }
     }
+    public int findById(int id) {return dao.findById(id);};
     /**
      * 根据条件进行分页查询
      * @param condition

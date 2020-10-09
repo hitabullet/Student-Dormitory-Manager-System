@@ -22,16 +22,6 @@ public interface ModelDao <T extends Model>{
 
     T findNo(T condition);
 
-    T findLeave(T condition);
-
-    T findQuit(T condition);
-
-    T findMaintain(T condition);
-
-    T findSNum(T condition);
-
-    List<T> findRepair(T condition);
-
     int findById(int id);
 
     List<T> findList(T condition);

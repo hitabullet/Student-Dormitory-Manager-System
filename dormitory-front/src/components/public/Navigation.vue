@@ -12,7 +12,7 @@
       <el-menu-item index="/InformationEntry">信息录入</el-menu-item>
       <el-menu-item index="/GetAccommodation">宿舍入住</el-menu-item>
       <el-menu-item index="/DormitoryRepair">宿舍报修</el-menu-item>
-      <el-menu-item index="5"><a href="https://www.ncc.edu.cn">我的学校</a></el-menu-item>
+      <el-menu-item index=""><a href="https://www.ncc.edu.cn">我的学校</a></el-menu-item>
     </el-menu>
     <logon></logon>
     <div class="burger">

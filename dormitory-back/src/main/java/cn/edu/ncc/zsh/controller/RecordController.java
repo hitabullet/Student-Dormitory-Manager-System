@@ -24,11 +24,6 @@ public class RecordController {
         return recordService.find(record);
     }
 
-    @GetMapping("quit")
-    public Record Quit(Record record){
-        return recordService.findQuit(record);
-    }
-
     @GetMapping("maintian")
     public Record maintain(Record record){
         return recordService.findMaintain(record);
@@ -43,4 +38,5 @@ public class RecordController {
     public List<Record> Repair(Record record){
         return recordService.findRepair(record);
     }
+
 }

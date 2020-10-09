@@ -87,7 +87,7 @@
     </insert>
 
     <!--查看学号是否重复-->
-    <select id="findNo" resultType="cn.edu.ncc.zsh.pojo.Student">
+    <select id="find" resultType="cn.edu.ncc.zsh.pojo.Student">
         select
         studentNo,
         chamber,
