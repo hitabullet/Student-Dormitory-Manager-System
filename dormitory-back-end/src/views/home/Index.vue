@@ -63,7 +63,6 @@ import Chart from '../../components/common/chart';
 
 export default {
   name: 'index',
-
   data() {
     return {
       checkSum: '',
@@ -100,7 +99,8 @@ export default {
         this.repairSum = response.data.id;
       }).catch(error => {
       });
-    }
+    },
+
   },
   computed: {
     showUserName() {
@@ -110,6 +110,7 @@ export default {
   mounted() {
     this.getData();
   },
+
   components: {
     'v-chart': Chart
   }

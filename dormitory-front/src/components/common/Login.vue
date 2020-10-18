@@ -7,11 +7,15 @@
         <h5>返回主页</h5>
       </span>
       <el-form :model="loginForm" status-icon :rules="rules" ref="ruleForm">
-        <el-form-item prop="studentNo">
-          <el-input prefix-icon="el-icon-user-solid" v-model="loginForm.studentNo" placeholder="请输入学号"></el-input>
+        <el-form-item prop="studentNo" >
+          <el-input prefix-icon="el-icon-user-solid"
+                    id="studentNo"
+                    v-model="loginForm.studentNo"
+                    placeholder="请输入学号"></el-input>
         </el-form-item>
-        <el-form-item prop="password">
+        <el-form-item prop="password" >
           <el-input type="password" autocomplete="off"
+                    id="password"
                     v-model="loginForm.password" show-password
                     prefix-icon="el-icon-lock" placeholder="请输入密码"></el-input>
         </el-form-item>
@@ -64,6 +68,7 @@ export default {
       } else {
         callback();
       }
+
     };
     const validateCode = (rule, value, callback) => {
       if (this.identifyCode !== value) {
@@ -127,6 +132,7 @@ export default {
             //判断后台返回的数据是否成功，如果代表成功，弹出登录成功的消息，跳转到首页
             if (response.data == 'success') {
               this.$message({
+                showClose: true,
                 message: '登录成功！',
                 type: 'success',
               });

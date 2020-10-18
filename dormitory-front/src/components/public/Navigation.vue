@@ -9,7 +9,7 @@
              text-color="#333"
              active-text-color="#2f82ff">
       <el-menu-item index="/Home">首页</el-menu-item>
-      <el-menu-item index="/InformationEntry">信息录入</el-menu-item>
+      <el-menu-item index="/InformationEntry" class="InformationEntry">信息录入</el-menu-item>
       <el-menu-item index="/GetAccommodation">宿舍入住</el-menu-item>
       <el-menu-item index="/DormitoryRepair">宿舍报修</el-menu-item>
       <el-menu-item index=""><a href="https://www.ncc.edu.cn">我的学校</a></el-menu-item>
@@ -59,6 +59,9 @@ export default {
 .el-menu {
   margin-left: -78px;
 }
+/*.el-menu-item:nth-child(2) {
+  color: red !important;
+}*/
 .el-menu--horizontal > .el-menu-item {
 
   border-bottom: none;

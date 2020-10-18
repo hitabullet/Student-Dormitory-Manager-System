@@ -1,7 +1,10 @@
 <template>
   <div class="tags" v-if="showTags">
     <ul>
-      <li class="tags-li" v-for="(item,index) in tagsList" :class="{'active': isActive(item.path)}" :key="index">
+      <li class="tags-li" v-for="(item,index) in tagsList"
+          :class="{'active': isActive(item.path)}"
+          :key="index"
+          >
         <router-link :to="item.path" class="tags-li-title">
           {{ item.title }}
         </router-link>
@@ -47,8 +50,10 @@ export default {
     },
     // 关闭全部标签
     closeAll() {
-      this.$router.push('/home');
-      this.tagsList = [];
+      if (this.tagsList.length > 0) {
+        this.tagsList = [];
+        this.$router.push('/home');
+      }
     },
     // 关闭其他标签
     closeOther() {

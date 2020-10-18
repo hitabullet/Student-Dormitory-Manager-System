@@ -9,7 +9,6 @@ module.exports = {
             '/api': {
                 // 服务端域名和端口
                 target: 'http://localhost:9091',
-                port: 8091,
                 // 如果设置成true：请求头中host会设置成target
                 changeOrigin: true,
                 // 用'/'替换浏览器请求url中的'/api'，例如浏览器请求为http://localhost:8082/api/xxx,
@@ -19,6 +18,8 @@ module.exports = {
                 }
             }
         },
+        host: '0.0.0.0',
         port:8081,
     }
 }
+

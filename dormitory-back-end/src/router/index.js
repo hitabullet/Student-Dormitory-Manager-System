@@ -3,12 +3,18 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
+// 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
+
 export default new Router({
     routes: [
         {
             path: '/',
             name: 'login',
-            component: () => import('../views/login'),
+            component: () => import('../views/login')
         },
         {
             path: 'home',
@@ -17,12 +23,12 @@ export default new Router({
         {
             path: 'home',
             component: () => import(/* webpackChunkName: "home" */ '../components/common/Home.vue'),
-            meta: { title: '自述文件' },
+            meta: {title: '自述文件' },
             children: [
                 {
                     path: '/home',
                     component: () => import(/* webpackChunkName: "dashboard" */ '../views/home/Index'),
-                    meta: { title: '用户首页' }
+                    meta: { title: '用户首页', hideclose: true }
                 },
                 {
                     path: '/dorms',
@@ -48,7 +54,7 @@ export default new Router({
                     path: '/addManager',
                     component: () => import(/* webpackChunkName: "icon" */ '../views/manager/AddManager'),
                     meta: { title: '添加管理员' }
-                },
+                }
             ]
         }
     ]

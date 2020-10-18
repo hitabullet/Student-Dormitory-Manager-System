@@ -61,6 +61,11 @@ export default {
   },
   data() {
     const validUser = (rule, value, callback) => {
+      if (value.length > 8) {
+        callback(new Error('用户名长度过长，请确认您的用户名是否输入错误！'));
+      } else {
+        callback();
+      }
       if (value === '') {
         callback(new Error('请输入您的用户名'));
       } else {
@@ -68,6 +73,11 @@ export default {
       }
     };
     const validatePass = (rule, value, callback) => {
+      if (value.length > 14) {
+        callback(new Error('密码长度过长，请确认您的密码是否输入错误！'));
+      } else {
+        callback();
+      }
       if (value === '') {
         callback(new Error('请输入您的密码'));
       } else {
@@ -157,7 +167,8 @@ export default {
   },
   created() {
     this.refreshCode();
-  }
+  },
+
 };
 </script>
 
