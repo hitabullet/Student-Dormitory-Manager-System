@@ -78,7 +78,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rude-java/project-practice/vue-route-demo" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/hellovue" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,6 +158,9 @@
       <workItem from="1602731767725" duration="4870000" />
       <workItem from="1602807651296" duration="3480000" />
       <workItem from="1602983030470" duration="39000" />
+      <workItem from="1603067083042" duration="1601000" />
+      <workItem from="1603087497035" duration="2229000" />
+      <workItem from="1603093687346" duration="8000" />
     </task>
     <servers />
   </component>
@@ -176,26 +179,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599638208206" />
-    <state x="995" y="169" key="FileChooserDialogImpl" timestamp="1602983065317">
+    <state x="995" y="169" key="FileChooserDialogImpl" timestamp="1603088190258">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="995" y="169" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602983065317" />
-    <state width="1500" height="2" key="GridCell.Tab.0.bottom" timestamp="1602836537466">
+    <state x="995" y="169" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603088190258" />
+    <state width="1515" height="176" key="GridCell.Tab.0.bottom" timestamp="1603092591383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1500" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602836537466" />
-    <state width="1500" height="2" key="GridCell.Tab.0.center" timestamp="1602836537466">
+    <state width="1515" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603092591383" />
+    <state width="1515" height="176" key="GridCell.Tab.0.center" timestamp="1603092591383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1500" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602836537466" />
-    <state width="1500" height="2" key="GridCell.Tab.0.left" timestamp="1602836537466">
+    <state width="1515" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603092591383" />
+    <state width="1515" height="176" key="GridCell.Tab.0.left" timestamp="1603092591383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1500" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602836537466" />
-    <state width="1500" height="2" key="GridCell.Tab.0.right" timestamp="1602836537466">
+    <state width="1515" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603092591383" />
+    <state width="1515" height="176" key="GridCell.Tab.0.right" timestamp="1603092591383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1500" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602836537466" />
+    <state width="1515" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603092591383" />
     <state width="1500" height="194" key="GridCell.Tab.1.bottom" timestamp="1602749485316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -248,6 +251,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602466776384" />
+    <state x="-206" y="205" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603067607747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-206" y="205" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1603067607747" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599619192542">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

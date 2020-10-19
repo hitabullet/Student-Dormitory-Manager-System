@@ -23,6 +23,12 @@
             initPieChart() {
                 let myChart = echarts.init(this.$refs.pie_echart);
                 myChart.setOption({
+                    legend: {
+                      orient: 'vertical',
+                      show: true,
+                      left: 20,
+                      top: 20,
+                    },
                     title: {
                         text: "学生居住状态",
                         bottom: "5px",

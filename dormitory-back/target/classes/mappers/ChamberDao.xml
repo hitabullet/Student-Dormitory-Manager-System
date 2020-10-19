@@ -1,0 +1,122 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.ncc.zsh.dao.ChamberDao">
+
+    <!--条件查询分页数据以及升序-->
+    <select id="findList" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+        select id,
+               chamberName,
+               chamberNo,
+                people,
+               peoples,
+               chamber,
+               flag
+               from chamber
+        <where>
+            and flag=0
+            <if test="chamberName!=null and chamberName!=''">
+                and chamberName LIKE '%${chamberName}%'
+            </if>
+            <if test="chamberNo!=null and chamberNo!=''">
+                and chamberNo LIKE '%${chamberNo}%'
+            </if>
+            ORDER BY chamberNo ASC
+        </where>
+    </select>
+
+    <!--降序排列-->
+    <select id="findListDesc" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+        select id,
+               chamberName,
+               chamberNo,
+               people,
+               peoples,
+               chamber,
+               flag
+        from chamber
+        where
+            flag=0 ORDER BY chamberNo DESC
+    </select>
+
+    <!--更新数据-->
+    <update id="update">
+        update chamber set
+                           chamberName= #{chamberName},
+                           chamberNo= #{chamberNo},
+                           people= #{people},
+                           peoples= #{peoples},
+                           chamber= #{chamber},
+                           flag=0
+        where id=#{id}
+    </update>
+
+    <!--删除一条数据-->
+    <update id="delete">
+        update chamber set flag=1 where id=#{id}
+    </update>
+
+    <!--查看寝室号是否重复-->
+    <select id="find" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+        select
+        chamberNo,
+        flag
+        from chamber
+        <where>
+        and flag=0
+            <if test="chamberNo!=null and chamberNo!=''">
+                and chamberNo=#{chamberNo}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insert">
+        insert into chamber(
+           chamberNo,
+            chamberName,
+            people,
+            peoples,
+            chamber,
+            flag
+        ) values (
+                          #{chamberNo},
+                          #{chamberName},
+                          #{people},
+                          #{peoples},
+                          #{chamber},
+                          0
+                     )
+    </insert>
+
+    <!--查询-->
+    <select id="selectbychamber" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+        select id,
+        chamberName,
+        chamberNo,
+        people,
+        peoples,
+        chamber,
+        flag
+        from chamber
+        <where>
+            <if test="chamber!=null and chamber!=''">
+                and chamber=#{chamber}
+            </if>
+        </where>
+    </select>
+
+    <!--查询-->
+    <select id="editChamber" resultType="String">
+        select
+        chamber,
+        flag
+        from chamber
+        <where>
+            <if test="chamber!=null and chamber!=''">
+                and chamber=#{chamber}
+            </if>
+        </where>
+    </select>
+
+</mapper>

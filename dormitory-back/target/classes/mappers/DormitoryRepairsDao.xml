@@ -1,0 +1,30 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.ncc.zsh.dao.DormitoryRepairsDao">
+
+
+    <!--插入数据-->
+    <insert id="insert">
+        insert into repair(
+            chamber,
+            message,
+            repairtime,
+            flag
+        ) values (
+                     #{chamber},
+                     #{message},
+                     #{repairtime},
+                     0
+                 )
+    </insert>
+
+    <!--查看该学生是否宿舍入住-->
+    <select id="findById" resultType="int">
+        select  CASE  when flag=1  then 1 ELSE 0 END
+        from student WHERE studentNo=#{studentNo}
+    </select>
+
+
+</mapper>

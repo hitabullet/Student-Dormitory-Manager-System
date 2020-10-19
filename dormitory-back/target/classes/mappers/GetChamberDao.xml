@@ -1,0 +1,49 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.ncc.zsh.dao.GetChamberDao">
+
+    <!--条件查询分页数据以及升序-->
+    <select id="findList" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+        select id,
+        people,
+        peoples,
+        chamber,
+        flag
+        from chamber
+        <where>
+            and flag=0
+            <if test="chamber!=null and chamber!=''">
+                and chamber LIKE '%${chamber}%'
+            </if>
+            ORDER BY id ASC
+        </where>
+    </select>
+
+    <!--降序排列-->
+    <select id="findListDesc" resultType="cn.edu.ncc.zsh.pojo.Chamber">
+        select id,
+               people,
+               peoples,
+               chamber,
+               flag
+        from chamber
+        where
+            flag=0  ORDER BY id DESC
+    </select>
+
+    <!--查看该学生是否宿舍入住-->
+    <select id="findById" resultType="int">
+        select  CASE  when flag=1  then 1 ELSE 0 END
+        from student WHERE studentNo=#{studentNo}
+    </select>
+
+    <!--更新已住人数-->
+    <update id="delete">
+        update chamber set people=people+1 where id=#{id}
+    </update>
+
+
+
+</mapper>

@@ -7,9 +7,6 @@ import './assets/icon/iconfont.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import './plugins/axios';
 import VueCookies from 'vue-cookies'
-import VueRouter from "vue-router"
-
-Vue.use(VueRouter);
 Vue.use(VueCookies)
 Vue.config.productionTip = false
 Vue.use(ElementUI);

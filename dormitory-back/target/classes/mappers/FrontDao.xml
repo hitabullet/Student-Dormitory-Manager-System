@@ -1,0 +1,79 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.ncc.zsh.dao.FrontLoginDao">
+
+    <!--登录-->
+    <select id="find" resultType="cn.edu.ncc.zsh.pojo.Student">
+        select
+        studentNo,
+        password,
+        flag
+        from student
+        <where>
+            <if test="studentNo!=null and studentNo!=''">
+                and studentNo=#{studentNo}
+            </if>
+            <if test="password!=null and password!=''">
+                and password=#{password}
+            </if>
+        </where>
+    </select>
+
+    <!--注册-->
+    <select id="insert" resultType="cn.edu.ncc.zsh.pojo.Student">
+        insert into student(studentNo,
+                            password,
+                            name,
+                            number,
+                            flag)
+        values (#{studentNo},
+                #{password},
+                '0',
+                #{number},
+                1)
+    </select>
+
+    <!--查看学号是否重复-->
+    <select id="findNo" resultType="cn.edu.ncc.zsh.pojo.Student">
+        select
+        studentNo,
+        from student
+        <where>
+            <if test="studentNo!=null and studentNo!=''">
+                and studentNo=#{studentNo}
+            </if>
+        </where>
+    </select>
+
+    <!--查看学号是否信息录入过-->
+    <select id="findById" resultType="int">
+        select  CASE  when name="0"  then 1 ELSE 0 END
+        from student where studentNo=#{studentNo}
+    </select>
+
+    <!--更新数据-->
+    <update id="updateInfo">
+        update student set
+                           name= #{name},
+                           sex= #{sex},
+                           address= #{address},
+                           className= #{className}
+        where studentNo=#{studentNo}
+    </update>
+
+    <!--更新宿舍-->
+    <update id="updateChamber">
+        update student set
+                           chamber= #{chamber},flag=0
+        where studentNo=#{studentNo}
+    </update>
+
+    <!--忘记密码-->
+    <update id="forget">
+        update student set
+            password= #{password}
+        where studentNo=#{studentNo} and password=#{password}
+    </update>
+</mapper>

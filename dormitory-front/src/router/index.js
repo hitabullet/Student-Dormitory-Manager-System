@@ -1,8 +1,10 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router';
+
+
 import Home from "@/components/common/Home";
 
-Vue.use(VueRouter)
+Vue.use(Router);
 
 const routes = [
     {
@@ -62,15 +64,15 @@ const routes = [
     },
 ]
 
-const router = new VueRouter({
+const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes
 })
 
 /*路由覆盖导致重定向出现错误*/
-const originalPush = VueRouter.prototype.push
-VueRouter.prototype.push = function push(location) {
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
 }
 
