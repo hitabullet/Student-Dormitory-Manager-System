@@ -7,10 +7,10 @@ import './assets/icon/iconfont.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import './plugins/axios';
 import VueCookies from 'vue-cookies'
+
 Vue.use(VueCookies)
 Vue.config.productionTip = false
 Vue.use(ElementUI);
-
 
 router.beforeEach(function (to, from, next) {
     if (to.meta.requireAuth) {

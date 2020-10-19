@@ -11,7 +11,7 @@ import './assets/icon/iconfont.css';
 import './components/common/directives';
 import moment from 'moment'
 
-Vue.prototype.$moment = moment
+Vue.prototype.$moment = moment；
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI, {
